@@ -1,0 +1,13 @@
+const express = require('express')
+
+const router = express.Router()
+
+router.get('/', (_,resp) =>  {
+    resp.send('Ola mundo!')
+
+
+
+});
+
+module.exports = router;
+
