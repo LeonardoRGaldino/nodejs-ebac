@@ -44,8 +44,10 @@
 <body>
     <div class="container">
         <div class="info">
-            <p><span class="label">Nome:</span> Leonardo</p>
-            <p><span class="label">Idade:</span> 26</p>
+            <% perfil.map((perfil) => { %>
+            <p><span class="label">Nome:</span><%= perfil.nome %></p>
+            <p><span class="label">Idade:</span> <%= perfil.idade %></p>
+            <% }) %>  
         </div>
     </div>
 </body>

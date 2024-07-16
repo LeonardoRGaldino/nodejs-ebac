@@ -1,13 +1,16 @@
-const express = require('express')
+const express = require("express");
 
-const router = express.Router()
+const { Pedido } = require("../models");
 
-router.get('/', (_, res) =>  {
-    res.render('pedidos/index')
+const router = express.Router();
 
-
-
+router.get("/", (_, res) => {
+  Pedido.find({}).then((pedidos) => {
+    res.render("pedidos/index", {
+      nomeDoUsuario: "Leonardo Galdino",
+      pedidos: pedidos,
+    });
+  });
 });
 
 module.exports = router;
-
